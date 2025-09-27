@@ -72,7 +72,7 @@ def calculate_gift_value(points_required: int = 0):
 
 # Run the function
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=False)
+    app.run(host="0.0.0.0", debug=False)
     # while True:
     # calculate_gift_value()
     # will_end = input("Do you want to continue? [Y/N]: ")
