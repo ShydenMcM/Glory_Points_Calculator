@@ -1,0 +1,39 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>YeeTalk Tools - By Shyden</title>
+</head>
+<body>
+    <h1>Glory Points Calculator</h1>
+    <h2>How to use:</h2>
+    In the box below, enter the amount of glory points you want to earn. <p>
+    Click the Submit button and the calculator will then break down <br>
+    <ul>
+        <li>how many coins you need</li>
+        <li>how many beans you need</li>
+        <li>how much gift score you need</li>
+    </ul>
+    <p></p>
+
+    <form action="/" method="post">
+        <label for="user_input">Enter the number of coins/glory points you need:</label><br>
+        <input type="text" id="user_input" name="user_input">
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if total_gift_value %}
+        <h2>Result:</h2>
+    <ul>
+        <li>How many coins you need: <strong>{{ coins_needed }}</strong></li>
+        <li>How many beans you need: <strong>{{ beans_needed }}</strong></li>
+        <li>Gift score you need: <strong>{{ total_gift_value }}</strong></li>
+    </ul>
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
